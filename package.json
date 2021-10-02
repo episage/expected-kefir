@@ -1,11 +1,33 @@
 {
   "name": "expected-kefir",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "This is a universal library for testing observables from [KefirJS](https://github.com/kefirjs/kefir).",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Tomasz Ciborski <tom@ciborski.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/episage/expected-kefir",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/episage/expected-kefir.git"
+  },
+  "keywords": [
+    "test",
+    "testing",
+    "unit",
+    "frp",
+    "bacon",
+    "bacon.js",
+    "kefir",
+    "kefir.js",
+    "functional",
+    "reactive",
+    "stream",
+    "streams",
+    "EventStream",
+    "Rx",
+    "RxJs",
+    "Observable"
+  ]
 }
