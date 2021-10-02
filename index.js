@@ -9,15 +9,15 @@ module.exports = {
                 var handler = function ({ type, value, current }) {
                     try {
                         if (i > array.length) {
-                            throw Error(`should not emit ${value} past end of stream`);
+                            throw Error(`should not emit [${value}] past end of stream`);
                         }
                         var expectedType = getExpectedType();
                         if (type !== expectedType) {
-                            throw Error(`got type ${type} instead of ${expectedType}`);
+                            throw Error(`got type [${type}] instead of type [${expectedType}]`);
                         }
                         var expectedValue = getExpectedValue()
                         if (value !== expectedValue) {
-                            throw Error(`got ${value} instead of ${expectedValue}`);
+                            throw Error(`got [${value}] instead of [${expectedValue}]`);
                         }
 
                         i++;
