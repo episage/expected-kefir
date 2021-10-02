@@ -1,6 +1,6 @@
 {
   "name": "expected-kefir",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "This is a universal library for testing observables from [KefirJS](https://github.com/kefirjs/kefir).",
   "main": "index.js",
   "scripts": {
