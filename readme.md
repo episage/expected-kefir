@@ -10,30 +10,38 @@ It assumes that observable ends at expected array end. If a test fails it will t
 npm i expected-kefir
 ```
 
-## Example usage
+## Example usage with [Mocha](https://mochajs.org/)
 
 ```javascript
-var { expect } = require('./expected-kefir');
+var { expect } = require('expected-kefir');
+var kefir = require('kefir');
 
 describe('samle test', function () {
 
-    function test(a, b) {
-        var pointSimplifier = new PointsSimplifier({ gpv });
-        var obs =
-            .flatten()
-            .map(p => pointSimplifier.point(p))
-            .flatten()
-        expect(obs).toEmit(b);
-    }
-
     it(`works`, function () {
         expect(kefir
-            .constant([1,2,3,4])
+            .constant([1, 2, 3, 4])
+            .flatten()
             .map(n => n * 2))
-        .toEmit([2,4,6,8])
+            .toEmit([2, 4, 6, 8])
     })
+
 })
 ```
+
+
+## Output
+
+```
+
+  samle test
+    ✔ works
+
+
+  1 passing (14ms)
+
+```
+
 
 ## API
 
@@ -42,7 +50,6 @@ expect(kefirJsObservable)
     .toEmit(expectedArrayEmits)
 ```
 
-## Output
+## Contributors
 
-I use [mocha](https://mochajs.org/) here but the library is agnostic.
-
+Warmly welcome!
