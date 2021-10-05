@@ -1,5 +1,4 @@
-var END = Symbol('end');
-var ERROR = Symbol('error');
+var assert = require('assert');
 
 module.exports = {
     expect(obs) {
@@ -13,12 +12,10 @@ module.exports = {
                         }
                         var expectedType = getExpectedType();
                         if (type !== expectedType) {
-                            throw Error(`got type [${type}] instead of type [${expectedType}]`);
+                            throw Error(`got type [${type}] instead of type [${expectedType}] at expected array index [${i}]`);
                         }
                         var expectedValue = getExpectedValue()
-                        if (value !== expectedValue) {
-                            throw Error(`got [${value}] instead of [${expectedValue}]`);
-                        }
+                        assert.deepStrictEqual(value, expectedValue)
 
                         i++;
                     } catch (error) {
