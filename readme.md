@@ -54,7 +54,7 @@ expect(kefirJsObservable)
 
 Warmly welcome!
 
-```mermaidjs
+```mermaid
 sequenceDiagram
     Alice->>+John: Hello John, how are you?
     Alice->>+John: John, can you hear me?
